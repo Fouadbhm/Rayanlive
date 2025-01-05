@@ -1,0 +1,526 @@
+body {
+      font-family: "Amiri", "Arial", sans-serif; /* Use an Arabic-friendly font */
+      background-color: #f3f4f6;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+           -webkit-user-select: none; /* Chrome, Safari, Opera */
+            -moz-user-select: none;    /* Firefox */
+            -ms-user-select: none;     /* Internet Explorer/Edge */
+            user-select: none;         /* Non-prefixed version */
+    }
+
+    /* Header style */
+
+   #header .logo1 {
+      color: #000;
+  margin-top: 20px;
+  font-size: 22px;
+   
+    }
+#header {
+  font-family: "Amiri", "Arial", sans-serif; /* Use an Arabic-friendly font */
+            width: 100%;
+            height: 40px;
+            background-color: #BE4A4A;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            color: #fff;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            font-size: 20px;
+            margin-top: 5px;
+            padding: 0px;
+            color: #FF0000;
+        }
+
+        #header buttons {
+            display: flex;
+            gap: 0px;
+        }
+
+        #header button {
+            padding: 5px;
+            background: none;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 0px 0px #E0F7FA;
+        }
+        i{
+          color: #fff;
+        }
+        #header .menu1{
+          margin-right: 9px;
+          font-size: 22px;
+        }
+#header #search-icon{
+  margin-top: 8px;
+  margin-left: 7px;
+  font-size: 22px;
+}
+ 
+    /* Container for the sections */
+    .container {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      transition: margin-right 0.5s;
+    }
+
+    /* Section wrapper */
+    .sections-wrapper {
+     margin-top: 140px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 10px;
+margin-bottom: 20px;
+
+    }
+
+    /* Each section (sports, movies, news) */
+    #quran{
+      font-family: "Amiri", "Arial", sans-serif; /* Use an Arabic-friendly font */
+    line-height: 1.6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 40px;
+width: 100%;
+padding: 4px;
+border: none;
+overflow: hidden;
+color: #17a589;
+text-align: center;
+      transition: all 0.3s ease;
+      writing-mode: horizontal-tb;
+    }
+    .section {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 120px;
+background-color: #fff;
+border-radius: 10px;
+margin: 0;
+overflow: hidden;
+text-align: center;
+box-shadow: 0 0px 5px #656668;
+      transition: all 0.3s ease;
+      border: 2px solid #17a589;
+      writing-mode: horizontal-tb;
+    }
+.section img{
+  pointer-events: none; /* منع التفاعل مع الصور */
+    -webkit-user-drag: none; /* منع سحب الصور في المتصفحات المستندة إلى WebKit */
+    user-drag: none;
+  width: 100%;
+  height: 100px;
+  padding: 0 auto;
+  margin: 0 auto;
+  border-radius: 8px;
+  border: .5px solid #737479;
+}
+.section h3{
+  margin: 7px 0;
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+            writing-mode: horizontal-tb;
+}
+    .section:hover {
+      border: 2px solid #6E6E6E;
+      background-color: #C7C7C7;
+      transform: translateY(-5px);
+           transform: scale(1.05);
+    }
+
+    /* Channels layout */
+    .channels {
+      display: none;
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      gap: 8px;
+      margin-top: 0;
+      justify-content: center;
+    }
+
+    .channels.active {
+      display: grid;
+    }
+
+    /* Channel card */
+    .channel {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      padding: 0;
+      width:180px;
+      height: 200px
+    }
+
+    .channel img {
+      pointer-events: none; /* منع التفاعل مع الصور */
+    -webkit-user-drag: none; /* منع سحب الصور في المتصفحات المستندة إلى WebKit */
+    user-drag: none;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .channel p{
+      margin: 10px 0;
+      font-size: 13px;
+      color: #333;
+      writing-mode: horizontal-tb;
+      font-weight: bold;
+    }
+ .menu{
+      margin-top: 45px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #5a5a5a00;
+    }
+      .main {
+      font-family: Arial, sans-serif;
+      font-weight: 300;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      background-color: #fff;
+      padding: 0;
+      width: 110px;
+      height: 120px;
+      margin: 5px;
+      font-size: 10px;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 8px;
+      cursor: pointer;
+      color: #000;
+      border: 2px solid #7d0a0a;
+      box-shadow: 0 4px 8px #240404;
+    }
+.main p{
+  margin-bottom: 10px;
+  padding: 0;
+  font-weight: bold;
+  writing-mode: horizontal-tb;
+}
+    .main img {
+      width: 80%;
+      height: 80px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .category:hover,.main:hover {
+      background: linear-gradient(to right, #ababab, #fbf1f1);
+      color: #111;
+      border: 2px solid #a70000;
+    }
+    /* Back button */
+    #backButton {
+      position: fixed;
+     top: 2px;
+      right: 7px;
+      background-color: #BE4A4A;
+      color: white;
+      border: none;
+      font-size: 28px;
+      padding: 1px;
+      cursor: pointer;
+      border-radius: 5px;
+      display: none;
+      z-index: 1000;
+    }
+
+    #backButton:hover {
+      background-color: #0056b3;
+    }
+      .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #fff;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 0px;
+            z-index: 1000;
+        }
+.sidebar .close-btn {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  font-size: 29px;
+  color: white;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.sidebar .close-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+}
+        .sidebar.open {
+            right: 5px;
+        }
+
+        .sidebar .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            padding: 0;
+            margin: 0;
+            background-color: #D3C566;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 50px;
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .sidebar ul li {
+            position: relative;
+            top: 0;
+            border-bottom: 1px solid #8bf4ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar ul li a {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            font-size: 10px;
+            text-decoration: none;
+            color: #111;
+        }
+.sidebar ul li a i{
+  margin:5px;
+  padding:5px;
+  font-size:22px;
+ color: #FF0000;
+}
+        .sidebar ul li a:hover {
+            background: #ccc;
+            color: #007d92;
+        }
+
+        .overlay {
+          display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+z-index: 999;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+                .sidebar footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    position: absolute; /* يثبت العنصر في مكانه */
+    bottom: 0; /* يجعله في أسفل الصفحة */
+    left: 0;
+    width: 100%;
+    height: 30px;
+    /* يمتد على عرض الصفحة بالكامل */
+    text-align: center; /* يضع النصوص في المنتصف */
+    padding: 12px; /* مساحة داخلية للفوتر */
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.8); /* لون خلفية شفاف */
+    color: #ffffffcc; /* لون النص */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* ظل خفيف للفوتر */
+    z-index: 1000; /* للتأكد من ظهوره فوق العناصر الأخرى */
+}
+
+.sidebar footer span {
+    color: #0094f3; /* لون مميز للنص داخل الفوتر */
+}
+       .search-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-box {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .search-results {
+            margin-top: 10px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .search-results p {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+            color:#111;
+        }
+
+        .search-results p:hover {
+            background-color: #f0f0f0;
+        }
+                @media screen and (min-width: 1024px) {
+            body {
+                background-color: #f0f0f0;
+                border-radius: 0; /* شكل عادي */
+                width:100%;
+                height: 80%;
+            }
+        }
+
+        /* للشاشات المتوسطة (تلفاز) */
+        @media screen and (min-width: 720px) and (max-width: 1023px) {
+            body {
+              font-family: "Amiri", "Arial", sans-serif; /* Use an Arabic-friendly font */
+    line-height: 1.6;
+                background-color: #E0F7FA;
+    /* شكل دائري */
+                width: 100%;
+             height:100%;
+               
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+            }
+        }
+
+        /* للشاشات الصغيرة (الهاتف المحمول) */
+        @media screen and (max-width: 719px) {
+            body {
+              font-family: "Amiri", "Arial", sans-serif; /* Use an Arabic-friendly font */
+    line-height: 1.6;
+                background-color:#FFF3E0;
+                /* شكل دائري */
+                width: 100%;
+                height: 100%;
+             
+          }
+        }
+          @media screen and (min-width: 720px) and (max-width: 1023px) {
+            
+              .section {
+                width: 200px;
+                font-size: 25px;
+              }
+              .sidebar ul li a{
+                margin: 5px;
+                display: flex;
+                overflow: auto;
+                color: #111;
+                font-size: 25px;
+              }
+            }
+            .fab .fa-tiktok::after {
+  filter: drop-shadow(5px 5px 0 #F70250) contrast(150%) brightness(110%);
+  z-index: -1;
+            }
+              .alert {
+      position: fixed;
+top: 40px;
+left:0;
+width: 100%;
+z-index: 20;
+background-color: #f8d7da;
+color: #721c24;
+padding: 5px;
+margin: 0;
+border: 1px solid #f5c6cb;
+border-radius: 2px;
+display: none;
+justify-content: center;
+    }
+    #reloadButton {
+   padding: 10px 20px;
+font-size: 16px;
+background-color: #007BFF;
+color: #111;
+text-align: center;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+    }
+    #reloadButton:hover {
+      background-color: #0056b3;
+    }  
