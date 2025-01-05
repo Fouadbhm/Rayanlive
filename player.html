@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشغل القنوات</title>
+    <!-- رابط مكتبة Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- مكتبة Video.js -->
+    <link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 40px;
+            padding: 0;
+            background: #BE4A4A;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .header h1 {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 5px;
+            right: 7px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+            padding: 0;
+            border-radius: 5px;
+            font-size: 25px;
+        }
+
+        .back-button:hover {
+            background: none;
+        }
+
+        .video-container {
+            position: fixed;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            height: 250px;
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        video, .video-js {
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                justify-content: center;
+            }
+
+            .header {
+                display: none;
+            }
+
+            .video-container {
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .back-button {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                z-index: 1000;
+                display: none;
+                background: rgba(0, 0, 0, 0.5);
+                padding: 10px;
+                border-radius: 50%;
+            }
+
+            .video-container.show-controls .back-button {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- شريط العنوان -->
+    <div class="header">
+        <button class="back-button" onclick="goBack()"><i class="fa-solid fa-arrow-right"></i></button>
+        <h1 id="channelName">مشغل القنوات</h1>
+    </div>
+
+    <!-- مشغل الفيديو -->
+    <div class="video-container">
+        <button class="back-button" onclick="goBack()"><i class="fa-solid fa-arrow-right"></i></button>
+        <video
+            id="videoPlayer"
+            class="video-js vjs-default-skin"
+            controls
+            autoplay
+            preload="auto"
+            data-setup='{}'>
+        </video>
+    </div>
+
+    <!-- مكتبة Video.js -->
+    <script src="https://vjs.zencdn.net/8.5.2/video.min.js"></script>
+    <script>
+        // تحديد الرابط لملف القنوات
+        const channelsFileUrl = "index.html"; // عدل الرابط إذا لزم الأمر
+
+        // دالة الرجوع إلى ملف القنوات
+        function goBack() {
+            window.location.href = channelsFileUrl;
+        }
+
+        // إعداد مشغل Video.js
+        function initPlayer() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const videoSrc = urlParams.get('src'); // رابط الفيديو
+            const channelName = urlParams.get('name'); // اسم القناة
+
+            if (channelName) {
+                document.getElementById('channelName').textContent = channelName;
+            }
+
+            if (!videoSrc) {
+                alert("لا يوجد رابط فيديو! يرجى اختيار قناة من القائمة.");
+                return;
+            }
+
+            // تحديث الرابط في شريط العناوين بدون المعلمات
+            history.pushState({}, '', 'مشغل-القنوات.html');
+
+            const player = videojs('videoPlayer');
+            player.src({
+                src: videoSrc,
+                type: getMimeType(videoSrc)
+            });
+
+            player.ready(() => {
+                player.play(); // تشغيل الفيديو تلقائيًا
+            });
+
+            player.on('error', function () {
+                console.error('خطأ أثناء تشغيل الفيديو:', player.error());
+                alert("تعذر تشغيل الفيديو. يرجى التحقق من الرابط.");
+            });
+        }
+
+        // تحديد نوع الفيديو بناءً على الامتداد
+        function getMimeType(url) {
+            if (url.endsWith('.m3u8')) return 'application/x-mpegURL';
+            if (url.endsWith('.mpd')) return 'application/dash+xml';
+            if (url.endsWith('.mp4')) return 'video/mp4';
+            return 'video/mp4'; // النوع الافتراضي
+        }
+
+        // التحكم في عرض وإخفاء زر الرجوع
+        function toggleControls() {
+            const videoContainer = document.querySelector('.video-container');
+            videoContainer.classList.toggle('show-controls');
+        }
+
+        // تحميل المشغل عند فتح الصفحة
+        document.addEventListener('DOMContentLoaded', () => {
+            initPlayer();
+
+            // إضافة حدث لإظهار/إخفاء زر الرجوع في الأجهزة الكبيرة
+            const videoContainer = document.querySelector('.video-container');
+            videoContainer.addEventListener('click', toggleControls);
+        });
+    </script>
+
+</body>
+</html>
