@@ -68,7 +68,7 @@
   <meta name="msapplication-TileImage" content="https://example.com/tile.png">
   <meta name="msapplication-config" content="browserconfig.xml">
   <link rel="manifest" href="manifest.json">
-
+<script src="Morocco.js"></script>
   <!-- Favicon -->
   <link rel="icon" href="https://example.com/favicon.ico" type="image/x-icon">
 
@@ -265,10 +265,9 @@
   <h3>Austria</h3>
 </div>
 </div>
-
-       <div id="Morocco" class="channels">
- <div onclick="openVideo('https://cdnamd-hls-globecast.akamaized.net/live/ramdisk/al_aoula_inter/hls_snrt/al_aoula_inter.m3u8')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/%D8%B4%D8%B9%D8%A7%D8%B1_%D9%82%D9%86%D8%A7%D8%A9_%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89_Al_Aoula_Tv_Logo.png" alt=""><p>Al Aoula HD</p></div>
-    <div onclick="openVideo('https://cdnamd-hls-globecast.akamaized.net/live/ramdisk/2m_monde/hls_video_ts_tuhawxpiemz257adfc/2m_monde.m3u8')" class="main"><img style="width: 60px;height:50px;margin:0;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/2M_TV_logo.svg/120px-2M_TV_logo.svg.png" alt=""><p>2M Maroc</p></div>
+  <div id="Morocco" class="channels">
+ <div onclick="openPlayer('https://cdnamd-hls-globecast.akamaized.net/live/ramdisk/al_aoula_inter/hls_snrt/al_aoula_inter.m3u8')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/%D8%B4%D8%B9%D8%A7%D8%B1_%D9%82%D9%86%D8%A7%D8%A9_%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89_Al_Aoula_Tv_Logo.png" alt=""><p>Al Aoula HD</p></div>
+    <div onclick="openPlayer('https://cdnamd-hls-globecast.akamaized.net/live/ramdisk/2m_monde/hls_video_ts_tuhawxpiemz257adfc/2m_monde.m3u8')" class="main"><img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/2M_TV_logo.svg/120px-2M_TV_logo.svg.png" alt=""><p>2M Maroc</p></div>
         <div onclick="window.open('go:3m')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Logo%2Barryadia%2Bmorocco.png" alt=""><p>Arryadia HD</p></div>
     <div onclick="window.open('go:4m')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Logo_tv_med_arrabia_nouveau.png" alt=""><p>Athaqafia HD</p></div>
     <div onclick="window.open('go:5m')" class="main"><img src="https://upload.wikimedia.org/wikipedia/fr/5/54/Logo_al_maghribia.png" alt=""><p>Al Maghribia HD</p></div>
@@ -277,16 +276,17 @@
     <div onclick="window.open('go:8m')" class="main"><img style="width: auto;height:60px;margin:0;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Tamazight-tv-chaine.png/120px-Tamazight-tv-chaine.png" alt=""><p><p>Tamazight TV</p></p></div>
     <div onclick="window.open('go:9m')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Laayoune_logo_png_tv.png" alt=""><p>Laâyoune TV HD</p></div>
     <div onclick="window.open('go:media')" class="main"><img src="https://upload.wikimedia.org/wikipedia/fr/thumb/c/ca/Medi_1_TV_logo.png/120px-Medi_1_TV_logo.png" alt=""><p>Medi 1 TV HD</p></div>
-    <div onclick="window.open('go:m24')" class="main"><img style="width: 60px;height:50px;margin:0;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/M24_tv_logo.jpg/120px-M24_tv_logo.jpg" alt=""><p>M24 Maroc HD</p></div>
-    <div onclick="window.open('go:télé')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Logotelemaroc.jpeg/120px-Logotelemaroc.jpeg" alt=""><p>Télé Maroc HD</p></div>
+    <div onclick="openPlayer(('go:m24')" class="main"><img style="width: 60px;height:50px;margin:0;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/M24_tv_logo.jpg/120px-M24_tv_logo.jpg" alt=""><p>M24 Maroc HD</p></div>
+    <div onclick="openPlayer(('go:télé')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Logotelemaroc.jpeg/120px-Logotelemaroc.jpeg" alt=""><p>Télé Maroc HD</p></div>
 
-    <div onclick="openVideo('https://edge18.vedge.infomaniak.com:443/livecast/chadatv/chunklist_w711816892.m3u8')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Chadatv_logo.png" alt=""><p>Chada TV HD</p></div>
-    <div onclick="window.open('go:mbc5')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/MBC_5_TV_Channel_Logo.png" alt=""><p>MBC 5 HD</p></div>
-    <div onclick="window.open('go:tnthd3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Logo%2Barryadia%2Bmorocco.png" alt=""><p>Arryadia TNT HD</p></div>
-    <div onclick="window.open('go:rayadiasd')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Logo%2Barryadia%2Bmorocco.png" alt="gh"><p>Arryadia SD</p></div>
+    <div onclick="openPlayer('https://edge18.vedge.infomaniak.com:443/livecast/chadatv/chunklist_w711816892.m3u8', 'Chada tv')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Chadatv_logo.png" alt=""><p>Chada TV HD</p></div>
+    <div onclick="openPlayer(('go:mbc5')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/MBC_5_TV_Channel_Logo.png" alt=""><p>MBC 5 HD</p></div>
+    <div onclick="openPlayer(('go:tnthd3')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Logo%2Barryadia%2Bmorocco.png" alt=""><p>Arryadia TNT HD</p></div>
+    <div onclick="openPlayer(('go:rayadiasd')" class="main"><img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Logo%2Barryadia%2Bmorocco.png" alt="gh"><p>Arryadia SD</p></div>
 </div>
+      
   <div id="bein" class="channels">
-            <div onclick="playChannel('http://swnord.online:8080/live/2397908905/00764816/3254.m3u8', 'BEIN SPORT 1')" class="main"><img src="https://i.imgur.com/Vtk2cGI.png" alt="gh"><p>BEIN SPORT 1</p></div>
+            <div onclick="openPlayer('http://swnord.online:8080/live/2397908905/00764816/3254.m3u8', 'BEIN SPORT 1')" class="main"><img src="https://i.imgur.com/Vtk2cGI.png" alt="gh"><p>BEIN SPORT 1</p></div>
     <div onclick="window.open('go:bein2')" class="main"><img src="https://i.imgur.com/vUJZSvs.png" alt=""><p>BEIN SPORT 2</p></div>
     <div onclick="window.open('go:bein3')" class="main"><img src="https://i.imgur.com/UYSMao3.png" alt="gh"><p>BEIN SPORT 3</p></div>
     <div onclick="window.open('go:bein4')" class="main"><img src="https://i.imgur.com/vwAgJNi.png" alt="gh"><p>BEIN SPORT 4</p></div>
@@ -724,5 +724,11 @@
              }
     });
 </script>
+  <script>
+    function openPlayer(videoUrl, channelName) {
+      const playerUrl = `player.html?src=${encodeURIComponent(videoUrl)}&name=${encodeURIComponent(channelName)}`;
+      window.location.href = playerUrl;
+    }
+  </script>
 </body> 
 </html>
