@@ -1,0 +1,20 @@
+{
+    "name": "تطبيقي المميز",
+    "short_name": "Rayan tv",
+    "start_url": "./",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4CAF50",
+    "icons": [
+        {
+            "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxlegowTV89qwUU7M4lVGBnIimwC_NZNRPnOXiO5-NC4uwRGL-iRM-83pH3w38eSASAbtgllAJ6sRp9dc860OCI0eElbhp2poE1tBafj00AloDlXUxDWOHdC96naxNnoowvcyiVUxhxsaIzPVPlwCEr33OZ5IaGgl_gFlnZRxX6Af3bSXCDqwVtkzgN4c/s320/S5.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxlegowTV89qwUU7M4lVGBnIimwC_NZNRPnOXiO5-NC4uwRGL-iRM-83pH3w38eSASAbtgllAJ6sRp9dc860OCI0eElbhp2poE1tBafj00AloDlXUxDWOHdC96naxNnoowvcyiVUxhxsaIzPVPlwCEr33OZ5IaGgl_gFlnZRxX6Af3bSXCDqwVtkzgN4c/s320/S5.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
