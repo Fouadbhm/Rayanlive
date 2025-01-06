@@ -3,6 +3,9 @@ body {
       background-color: #f3f4f6;
       margin: 0;
       padding: 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
       box-sizing: border-box;
            -webkit-user-select: none; /* Chrome, Safari, Opera */
             -moz-user-select: none;    /* Firefox */
@@ -93,11 +96,11 @@ body {
 
     /* Section wrapper */
     .sections-wrapper {
-     margin-top: 140px;
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 10px;
+       display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 elements per row */
+            gap: 5px;
+            padding: 10px;
+            margin-top: 120px;
 margin-bottom: 20px;
 
     }
@@ -111,8 +114,8 @@ margin-bottom: 20px;
       align-items: center;
       position: absolute;
       top: 40px;
-width: 100%;
-padding: 4px;
+width: 90%;
+padding: 0;
 border: none;
 overflow: hidden;
 color: #17a589;
@@ -124,7 +127,8 @@ text-align: center;
       display: flex;
       justify-content: center;
       flex-direction: column;
-      width: 120px;
+      padding: 0;
+    
 background-color: #fff;
 border-radius: 10px;
 margin: 0;
@@ -163,7 +167,7 @@ box-shadow: 0 0px 5px #656668;
     /* Channels layout */
     .channels {
       display: none;
-      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 8px;
       margin-top: 0;
       justify-content: center;
@@ -470,19 +474,32 @@ z-index: 999;
         @media screen and (max-width: 719px) {
             body {
               font-family: "Amiri", "Arial", sans-serif; /* Use an Arabic-friendly font */
-    line-height: 1.6;
+  margin: 0;
                 background-color:#FFF3E0;
                 /* شكل دائري */
                 width: 100%;
                 height: 100%;
              
           }
+          .sections-wrapper{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 elements per row */
+            gap: 5px;
+            padding: 10px;
+            margin-top: 120px;
+margin-bottom: 20px;
+            
+          }
         }
           @media screen and (min-width: 720px) and (max-width: 1023px) {
             
               .section {
-                width: 200px;
+                width: auto;
                 font-size: 25px;
+                display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0;
               }
               .sidebar ul li a{
                 margin: 5px;
@@ -490,6 +507,21 @@ z-index: 999;
                 overflow: auto;
                 color: #111;
                 font-size: 25px;
+              }
+              .sections-wrapper{
+                display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 3 elements per row */
+            gap: 10px;
+            justify-content: center;
+              }
+              .channels{
+                display: none;
+                grid-template-columns: repeat(7, 1fr);
+              }
+              .section{
+                margin: 5px;
+                width: auto;
+             
               }
             }
             .fab .fa-tiktok::after {
@@ -524,3 +556,15 @@ cursor: pointer;
     #reloadButton:hover {
       background-color: #0056b3;
     }  
+      @media (max-width: 768px) {
+            .channels, .section {
+                grid-template-columns: repeat(3, 1fr); /* 2 elements per row for medium screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .channels, .section {
+                grid-template-columns:
+             repeat(3, 1fr); /* 1 element per row for small screens (mobiles) */
+            }
+        }
